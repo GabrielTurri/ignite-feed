@@ -11,6 +11,12 @@
   --green-500: #00875f;
 }
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body{
   background: var(--gray-900);
   color: var(--gray-300);
