@@ -17,7 +17,7 @@ export function Post() {
       <div className={styles.content}>
         <p>Fala galera!</p>
         <p>Acabei de dar um exemplo</p>
-        <p><a href="https://github.com/gabrielturri">https://github.com/gabrielturri</a></p>
+        <p><a href="https://github.com/gabrielturri">Repositório no Github</a></p>
         <p><a href="">#EaeBeleza</a></p>
       </div>
     </article>
