@@ -20,6 +20,18 @@ export function Post() {
         <p><a href="https://github.com/gabrielturri">Repositório no Github</a></p>
         <p><a href="">#EaeBeleza</a></p>
       </div>
+
+      <form className={styles.commentForm}>
+        <strong>Deixe seu comentário</strong>
+
+        <textarea
+          placeholder='Deixe um comentário'
+        />
+
+        <footer>
+          <button type='submit'>Publicar</button>
+        </footer>
+      </form>
     </article>
   )
 }
