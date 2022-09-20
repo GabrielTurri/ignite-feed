@@ -21,20 +21,20 @@ const posts = [
     content: [
       { type: 'paragraph', content: 'Fala galera!', },
       { type: 'paragraph', content: 'Acabei de dar um exemplo', },
-      { type: 'paragraph', content: '<a href="https://github.com/gabrielturri">Repositório no Github</a>', },
+      { type: 'link', content: 'Repositório no github', url:'https://github.com/gabrielturri' },
     ],
     publishedAt: new Date('2022-09-15 12:00:00')
   }, {
     id: 2,
     author: {
-      avatarUrl: 'https://github.com/lucasadum.png',
+      avatarUrl: 'https://github.com/lucas4dum.png',
       name: 'Lucas Adum',
       role: 'Back End Developer'
     },
     content: [
       { type: 'paragraph', content: 'Fala galera!', },
       { type: 'paragraph', content: 'Acabei de dar outro exemplo', },
-      { type: 'paragraph', content: '<a href="https://github.com/gabrielturri">Repositório no Github</a>', },
+      { type: 'link', content: 'Repositório no github', url:'https://github.com/lucas4dum' },
     ],
     publishedAt: new Date('2022-09-17 12:00:00')
   },
