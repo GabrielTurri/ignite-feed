@@ -2,10 +2,9 @@ import styles from './Comment.module.css'
 import {Trash, ThumbsUp} from 'phosphor-react'
 import { Avatar } from './Avatar'
 
-export function Comment(props){
-  function handleDeleteComment(comment){ 
-    console.log('deletar')
-    
+export function Comment({ content, onDeleteComment }){
+  function handleDeleteComment(){ 
+    onDeleteComment(content); 
   }
 
   return( 
@@ -25,7 +24,7 @@ export function Comment(props){
             </button>
           </header>
 
-          <p>{props.content}</p>
+          <p>{content}</p>
         </div>
         <footer>
           <button>

@@ -57,8 +57,7 @@ function App() {
               publishedAt={post.publishedAt}
             />
           )
-        }
-        )}
+        })}
       </main>
     </div>
     </>

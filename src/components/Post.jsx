@@ -31,8 +31,12 @@ function handleCreateNewComment() {
   setNewCommentText('')
 }
 
-function deleteComment(comment) {
-  
+function deleteComment(commentToDelete) {
+  const commentsWithoutDeleteOne = comments.filter(comment => {
+    return comment !== commentToDelete;
+  })
+
+  setComments(commentsWithoutDeleteOne);
 }
 
 function handleNewCommentChange() {
@@ -68,7 +72,7 @@ function handleNewCommentChange() {
         <strong>Deixe seu comentário</strong>
 
         <textarea
-          name='commentInput'
+          name='comment'
           placeholder='Deixe um comentário'
           value={newCommentText}
           onChange={handleNewCommentChange}
