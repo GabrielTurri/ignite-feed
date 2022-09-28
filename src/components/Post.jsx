@@ -31,6 +31,15 @@ function handleCreateNewComment() {
   setNewCommentText('')
 }
 
+function handleNewCommentChange() {
+  event.target.setCustomValidity('');
+  setNewCommentText(event.target.value)
+}
+
+function handleNewCommentInvalid() {
+  event.target.setCustomValidity('Este campo é obrigatório!')
+}
+
 function deleteComment(commentToDelete) {
   const commentsWithoutDeleteOne = comments.filter(comment => {
     return comment !== commentToDelete;
@@ -39,9 +48,7 @@ function deleteComment(commentToDelete) {
   setComments(commentsWithoutDeleteOne);
 }
 
-function handleNewCommentChange() {
-  setNewCommentText(event.target.value)
-}
+  const isNewCommentEmpty = newCommentText.length === 0;
 
   return(
     <article className={styles.post}>
@@ -71,15 +78,22 @@ function handleNewCommentChange() {
       <form onSubmit={handleCreateNewComment} className={styles.commentForm}>
         <strong>Deixe seu comentário</strong>
 
+        {/* Campo de texto */}
         <textarea
           name='comment'
           placeholder='Deixe um comentário'
           value={newCommentText}
           onChange={handleNewCommentChange}
+          onInvalid={handleNewCommentInvalid}
+          required
         />
 
         <footer>
-          <button type='submit'>Publicar</button>
+          <button 
+            type='submit' 
+            disabled={isNewCommentEmpty}
+          >
+            Publicar</button>
         </footer>
       </form>
 
