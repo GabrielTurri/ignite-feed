@@ -18,10 +18,10 @@ interface Content{
   url?: string;
 }
 
-interface PostProps{
+export interface PostProps{
   author: Author;
-  publishedAt: Date;
   content: Content[];
+  publishedAt: Date;
 }
 
 export function Post({ author, publishedAt, content }: PostProps) {
